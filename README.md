@@ -15,7 +15,9 @@ We benchmarked [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3) ac
 | **Emo-W4 (ours, `b2/`)** | 24.8 | 0.031 | 0.039 | **0.143** | 0.533 | 0.118 | 0.92 |
 | fish-speech server FP8 | – | 0.039 | 0.049 | 0.167 | 0.518 | 0.112 | 0.43 |
 | audio.cpp GGUF Q4_K_S | – | 0.028 | 0.033 | 0.167 | 0.537 | 0.127 | 0.31 |
-<!--MLX_ROW-->
+| MLX 4-bit (mlx-audio, Apple M5 Max 128 GB)¹ | – | 0.031 | 0.044 | 0.155 | 0.535 | 0.132 | 2.03 |
+
+¹ Same 90 seed-matched items, generated on a MacBook (Apple M5 Max, 128 GB) with `scripts/gen_mlx.py`, scored on the same GPU eval stack. RTF = wall time / audio duration (mean 2.03, median 1.02; >1 means slower than real time); peak process RSS 22.5 GB; model load 7.9 s. 15/630 takes hit the max-length cap.
 
 **Notes**
 - RTF was measured on an RTX PRO 6000 Blackwell, which was shared with other jobs, so treat speed as indicative only.
