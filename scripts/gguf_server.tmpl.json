@@ -1,0 +1,39 @@
+{
+ "host": "127.0.0.1",
+ "port": 8035,
+ "backend": "cuda",
+ "threads": 8,
+ "lazy_load": false,
+ "max_loaded_models": 1,
+ "ui": false,
+ "models": [
+  {
+   "id": "drama-3",
+   "family": "fish_drama3",
+   "path": "/home/a/AI/drama3-community/models/gguf/drama-3-backbone-8bit-experts-Q4_K_S.gguf",
+   "task": "tts",
+   "mode": "offline",
+   "session_options": {
+    "fish_drama3.cpu_expert_layers": 0,
+    "fish_drama3.context_length": 4096
+   },
+   "default_request_options": {
+    "max_tokens": 600
+   },
+   "voice_presets": {
+    "voiceA": {
+     "voice_ref": "/home/a/AI/drama3-community/testset/voiceA_ref.wav",
+     "reference_text": "@@voiceA"
+    },
+    "voiceB": {
+     "voice_ref": "/home/a/AI/drama3-community/testset/voiceB_ref.wav",
+     "reference_text": "@@voiceB"
+    },
+    "public": {
+     "voice_ref": "/home/a/AI/drama3-community/testset/public_ref.wav",
+     "reference_text": "@@public"
+    }
+   }
+  }
+ ]
+}

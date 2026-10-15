@@ -1,0 +1,36 @@
+# Fixed test set v1: 30 lines. cat = neutral | scream | sob | laugh | whisper | soblaugh
+LINES = [
+ ("n01","neutral","The quarterly report is ready, and the numbers look better than we expected."),
+ ("n02","neutral","Please send the invoice to the finance team before Friday afternoon."),
+ ("n03","neutral","Our office is on the third floor, right next to the coffee machine."),
+ ("n04","neutral","The train to the airport leaves every fifteen minutes from platform two."),
+ ("n05","neutral","I checked the settings twice, and everything seems to be working now."),
+ ("n06","neutral","Transfers usually arrive in under two minutes, even on weekends."),
+ ("n07","neutral","She opened the window, took a deep breath, and started writing again."),
+ ("n08","neutral","If you have any questions, just reply to this message and we will help."),
+ ("n09","neutral","Thirty seven thousand four hundred and twelve people visited the museum last year."),
+ ("n10","neutral","The weather tomorrow will be sunny in the morning with light rain in the evening."),
+ ("s01","scream","[screaming] Get out of the way, the whole thing is going to collapse!"),
+ ("s02","scream","[shouting angrily] I have been waiting for three days and nobody has called me back!"),
+ ("s03","scream","[screaming with excitement] We did it! We actually did it, I can't believe it!"),
+ ("s04","scream","[yelling] Stop the car! Stop the car right now!"),
+ ("c01","sob","[sobbing] I'm sorry, I just, I really thought he would come home this time."),
+ ("c02","sob","[crying] Please don't leave me here alone, not tonight."),
+ ("c03","sob","[sobbing uncontrollably] It's gone. Everything we worked for is just gone."),
+ ("c04","sob","[voice breaking, tearful] I wanted to tell you how proud I am of you."),
+ ("l01","laugh","[laughing] Oh no, you did not just wear that to the wedding!"),
+ ("l02","laugh","[laughs loudly] That is the funniest thing I have heard all week."),
+ ("l03","laugh","[giggling] Stop it, stop it, I can't breathe, you're terrible."),
+ ("l04","laugh","[laughing hysterically] He fell right into the pool with his suit on!"),
+ ("w01","whisper","[whispers] Don't move. I think someone is standing behind the door."),
+ ("w02","whisper","[whispering] Keep your voice down, the baby is finally asleep."),
+ ("w03","whisper","[whispers] I'll tell you a secret, but you can never tell anyone."),
+ ("w04","whisper","[whispering nervously] Did you hear that? Something is moving in the attic."),
+ ("x01","soblaugh","[sobbing and laughing at the same time] I'm so happy, I'm so happy I can't stop crying!"),
+ ("x02","soblaugh","[laughing through tears] You came back, you idiot, you actually came back."),
+ ("x03","soblaugh","[crying, then laughing] I failed the exam, [laughs] and I don't even care anymore."),
+ ("x04","soblaugh","[tearful laughter] Look at us, two grown adults crying over a cartoon."),
+]
+VOICES = ["voiceA","voiceB","public"]   # voiceA = private, never published
+SEEDS = [11,22,33,44,55,66,77]
+TEMP, TOP_P = 1.0, 0.95
