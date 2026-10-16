@@ -21,7 +21,7 @@ We benchmarked [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3) ac
 
 ¹ Same 90 seed-matched items, generated on a MacBook (Apple M5 Max, 128 GB) with `scripts/gen_mlx.py`, scored on the same GPU eval stack. RTF = wall time / audio duration (mean 2.03, median 1.02; >1 means slower than real time); peak process RSS 22.5 GB; model load 7.9 s. 15/630 takes hit the max-length cap.
 
-**Emo-W4 weights:** [huggingface.co/skysay/drama3-emo-w4](https://huggingface.co/skysay/drama3-emo-w4) (private for now; will be made public soon).
+**Emo-W4 weights:** [huggingface.co/skysay/drama3-emo-w4](https://huggingface.co/skysay/drama3-emo-w4).
 
 **Notes**
 - RTF was measured on an RTX PRO 6000 Blackwell, which was shared with other jobs, so treat speed as indicative only.
