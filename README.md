@@ -1,5 +1,7 @@
 # drama3-quant-bench: does quantization kill Drama 3's emotions?
 
+**▶ Listen in your browser: [https://skyzer.github.io/drama3-quant-bench/](https://skyzer.github.io/drama3-quant-bench/)**
+
 We benchmarked [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3) across quantized builds and runtimes: 30 lines × 3 voices × 7 seeds = **630 takes per variant**, scored automatically for intelligibility, voice match, failures and emotion. We also built **Emo-W4**, a 4-bit variant calibrated on emotional speech, which reduces failures on crying lines.
 
 ![quality](charts/quality.png)
@@ -29,17 +31,22 @@ We benchmarked [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3) ac
 - int8 ConvRot reaches the same 7-seed sob fail as Emo-W4 (0.143), but at 38.7 GB.
 - There are only 4 lines per emotion category, so read the category numbers as indicative.
 
-## Listen (LJ Speech public-domain reference voice, seed 11 for every file, no cherry-picking)
+## Listen
+**▶ One-click players: [https://skyzer.github.io/drama3-quant-bench/](https://skyzer.github.io/drama3-quant-bench/)** (GitHub can't play audio inline; the `samples/mp4/` files are labelled waveform videos, and the `.wav` links download the originals.)
+
+<video src="https://raw.githubusercontent.com/skyzer/drama3-quant-bench/main/samples/mp4/emo_w4_c01.mp4" controls></video>
+
+(LJ Speech public-domain reference voice, seed 11 for every file, no cherry-picking)
 | line | FP8 | W4A8 | Emo-W4 |
 |---|---|---|---|
-| sob: "[sobbing] I'm sorry, I just, I really thought he would come home this time." | [▶ wav](samples/fp8_c01.wav) | [▶ wav](samples/w4a8_c01.wav) | [▶ wav](samples/emo_w4_c01.wav) |
-| sob + laugh: "[sobbing and laughing at the same time] I'm so happy…" | [▶](samples/fp8_x01.wav) | [▶](samples/w4a8_x01.wav) | [▶](samples/emo_w4_x01.wav) |
-| laugh: "[laughing] Oh no, you did not just wear that to the wedding!" | [▶](samples/fp8_l01.wav) | [▶](samples/w4a8_l01.wav) | [▶](samples/emo_w4_l01.wav) |
-| scream: "[screaming] Get out of the way…" | [▶](samples/fp8_s01.wav) | [▶](samples/w4a8_s01.wav) | [▶](samples/emo_w4_s01.wav) |
-| whisper: "[whispers] Don't move…" | [▶](samples/fp8_w01.wav) | [▶](samples/w4a8_w01.wav) | [▶](samples/emo_w4_w01.wav) |
-| neutral: "The quarterly report is ready…" | [▶](samples/fp8_n01.wav) | [▶](samples/w4a8_n01.wav) | [▶](samples/emo_w4_n01.wav) |
+| sob: "[sobbing] I'm sorry, I just, I really thought he would come home this time." | [▶ play](https://skyzer.github.io/drama3-quant-bench/#c01) · [mp4](samples/mp4/fp8_c01.mp4) · [wav](samples/fp8_c01.wav) | [▶ play](https://skyzer.github.io/drama3-quant-bench/#c01) · [mp4](samples/mp4/w4a8_c01.mp4) · [wav](samples/w4a8_c01.wav) | [▶ play](https://skyzer.github.io/drama3-quant-bench/#c01) · [mp4](samples/mp4/emo_w4_c01.mp4) · [wav](samples/emo_w4_c01.wav) |
+| sob + laugh: "[sobbing and laughing at the same time] I'm so happy…" | [▶ play](https://skyzer.github.io/drama3-quant-bench/#x01) · [mp4](samples/mp4/fp8_x01.mp4) · [wav](samples/fp8_x01.wav) | [▶ play](https://skyzer.github.io/drama3-quant-bench/#x01) · [mp4](samples/mp4/w4a8_x01.mp4) · [wav](samples/w4a8_x01.wav) | [▶ play](https://skyzer.github.io/drama3-quant-bench/#x01) · [mp4](samples/mp4/emo_w4_x01.mp4) · [wav](samples/emo_w4_x01.wav) |
+| laugh: "[laughing] Oh no, you did not just wear that to the wedding!" | [▶ play](https://skyzer.github.io/drama3-quant-bench/#l01) · [mp4](samples/mp4/fp8_l01.mp4) · [wav](samples/fp8_l01.wav) | [▶ play](https://skyzer.github.io/drama3-quant-bench/#l01) · [mp4](samples/mp4/w4a8_l01.mp4) · [wav](samples/w4a8_l01.wav) | [▶ play](https://skyzer.github.io/drama3-quant-bench/#l01) · [mp4](samples/mp4/emo_w4_l01.mp4) · [wav](samples/emo_w4_l01.wav) |
+| scream: "[screaming] Get out of the way…" | [▶ play](https://skyzer.github.io/drama3-quant-bench/#s01) · [mp4](samples/mp4/fp8_s01.mp4) · [wav](samples/fp8_s01.wav) | [▶ play](https://skyzer.github.io/drama3-quant-bench/#s01) · [mp4](samples/mp4/w4a8_s01.mp4) · [wav](samples/w4a8_s01.wav) | [▶ play](https://skyzer.github.io/drama3-quant-bench/#s01) · [mp4](samples/mp4/emo_w4_s01.mp4) · [wav](samples/emo_w4_s01.wav) |
+| whisper: "[whispers] Don't move…" | [▶ play](https://skyzer.github.io/drama3-quant-bench/#w01) · [mp4](samples/mp4/fp8_w01.mp4) · [wav](samples/fp8_w01.wav) | [▶ play](https://skyzer.github.io/drama3-quant-bench/#w01) · [mp4](samples/mp4/w4a8_w01.mp4) · [wav](samples/w4a8_w01.wav) | [▶ play](https://skyzer.github.io/drama3-quant-bench/#w01) · [mp4](samples/mp4/emo_w4_w01.mp4) · [wav](samples/emo_w4_w01.wav) |
+| neutral: "The quarterly report is ready…" | [▶ play](https://skyzer.github.io/drama3-quant-bench/#n01) · [mp4](samples/mp4/fp8_n01.mp4) · [wav](samples/fp8_n01.wav) | [▶ play](https://skyzer.github.io/drama3-quant-bench/#n01) · [mp4](samples/mp4/w4a8_n01.mp4) · [wav](samples/w4a8_n01.wav) | [▶ play](https://skyzer.github.io/drama3-quant-bench/#n01) · [mp4](samples/mp4/emo_w4_n01.mp4) · [wav](samples/emo_w4_n01.wav) |
 
-Blind A/B page (public voice only): `ab/public/index.html`. Open it locally and rate the takes 1–5.
+Blind A/B page (public voice only): [https://skyzer.github.io/drama3-quant-bench/ab/public/](https://skyzer.github.io/drama3-quant-bench/ab/public/index.html) (or open `ab/public/index.html` locally) and rate the takes 1–5.
 
 ## Talking-video demo: Emo-W4 voice → MiniMax H3 Ref2VA (synthetic face)
 [![demo](samples/demo.gif)](samples/demo_talking.mp4)
