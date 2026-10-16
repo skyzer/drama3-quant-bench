@@ -34,7 +34,7 @@ We benchmarked [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3) ac
 ## Listen
 **▶ One-click players: [https://skyzer.github.io/drama3-quant-bench/](https://skyzer.github.io/drama3-quant-bench/)** (GitHub can't play audio inline; the `samples/mp4/` files are labelled waveform videos, and the `.wav` links download the originals.)
 
-<video src="https://raw.githubusercontent.com/skyzer/drama3-quant-bench/main/samples/mp4/emo_w4_c01.mp4" controls></video>
+<!-- inline players: paste https://github.com/user-attachments/assets/<uuid> URLs here (drag-drop samples/mp4/*.mp4 into the GitHub web editor) -->
 
 (LJ Speech public-domain reference voice, seed 11 for every file, no cherry-picking)
 | line | FP8 | W4A8 | Emo-W4 |
